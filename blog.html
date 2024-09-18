@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew - Blog</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #ffffff;
+            --sub-color: #ff6b6b;
+            --bteam-color: #4169e1;
+            --text-color: #ffffff;
+            --bg-color: #0a0a0a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 1rem 5%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: var(--bg-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--sub-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--sub-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        main {
+            padding: 100px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .blog-header h1 {
+            font-size: 3rem;
+            color: var(--sub-color);
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 300;
+        }
+
+        .post {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .post-title {
+            font-size: 2rem;
+            color: var(--sub-color);
+            margin-bottom: 1rem;
+        }
+
+        .post-content {
+            color: var(--text-color);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--sub-color);
+            color: var(--bg-color);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+        }
+
+        footer {
+            padding: 2rem 5%;
+            background-color: var(--bg-color);
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 2rem;
+        }
+
+        footer p {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--sub-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Andrew</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="https://darknux.notion.site/Sherlocks-5051b3fd21644af58dbcec4cd0db7be0">Writeups</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="files/resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-header">
+            <h1>My Blog</h1>
+            <p>Thoughts, discoveries, and adventures in cybersecurity.</p>
+        </section>
+
+        <!-- Blog Post 1 -->
+        <article class="post">
+            <h2 class="post-title">Threat Hunting 101: Diving into Network Forensics</h2>
+            <p class="post-content">Threat hunting requires a proactive approach to identifying threats in a network. In this blog post, I share my experience using Elastic SIEM for detecting and analyzing suspicious network traffic...</p>
+            <a href="#readmore" class="read-more">Read More</a>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="post">
+            <h2 class="post-title">Deep Dive into Event Tracing for Windows (ETW)</h2>
+            <p class="post-content">Event Tracing for Windows (ETW) is a powerful diagnostic tool that provides a comprehensive overview of system and application performance. Here, I discuss how ETW can be leveraged for threat detection...</p>
+            <a href="#readmore" class="read-more">Read More</a>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="post">
+            <h2 class="post-title">Snort 3: Writing Rules for HTTP Header Analysis</h2>
+            <p class="post-content">In this post, I walk through how to write effective Snort 3 rules for analyzing HTTP headers and detecting potential anomalies. This will help improve network defenses...</p>
+            <a href="#readmore" class="read-more">Read More</a>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Andrew - Cybersecurity Blog | <a href="#contact">Contact Me</a></p>
+    </footer>
+</body>
+</html>
